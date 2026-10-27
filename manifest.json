@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Steam Guide Enhancer",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "Checkboxes, notes, drawing and resume-where-you-left-off for Steam Community guides. Saved locally, even after a restart.",
   "homepage_url": "https://github.com/DiogoAlmMarques/steam-guide-enhancer",
   "icons": {

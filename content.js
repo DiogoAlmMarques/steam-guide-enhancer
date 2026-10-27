@@ -46,9 +46,15 @@
     return wrap;
   };
 
+  // Ticking a section also ticks every section before it (you've read past them).
+  // Unticking only unticks that one section.
   const setChecked = (id, value) => {
-    if (value) state.checked[id] = true;
-    else delete state.checked[id];
+    if (value) {
+      const idx = sections.findIndex(s => s.id === id);
+      for (let i = 0; i <= idx; i++) state.checked[sections[i].id] = true;
+    } else {
+      delete state.checked[id];
+    }
     refresh();
     save();
   };

@@ -13,6 +13,7 @@ A small Brave / Chrome extension that makes long Steam Community guides easier t
 ## Features
 
 - **Checkboxes** on every section title and Guide Index entry, plus a progress bar ("3 / 12 sections done")
+- **Auto-fill**: ticking a section also ticks every section before it. Unticking only affects that one section
 - **Resume where I left off** remembers the section you were reading and how far into it you were
 - **Next unchecked** jumps to the first section you haven't ticked yet
 - **Notes**: click 📝 next to any section title to write a note. **📝 All notes** lists every note in the guide
