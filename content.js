@@ -101,6 +101,10 @@
         <button class="sgp-allnotes" title="See all your notes for this guide">📝 All notes</button>
         <button class="sgp-reset" title="Clear all ticks for this guide">Reset checkmarks</button>
       </div>
+      <div class="sgp-credit">
+        Made by Diogo Marques ·
+        <a href="https://github.com/DiogoAlmMarques" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>`;
   document.body.appendChild(panel);
 

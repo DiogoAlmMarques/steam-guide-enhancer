@@ -248,3 +248,15 @@
 .sgp-toolbar .sgp-color.sgp-on { border-color: #fff; box-shadow: 0 0 0 2px #4da3ff; }
 .sgp-toolbar .sgp-clear { background: #5a2a2a; }
 .sgp-toolbar .sgp-done-draw { background: #3b6e22; }
+
+/* Credit */
+.sgp-credit {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #2a3f54;
+  font-size: 11px;
+  color: #8f98a0;
+  text-align: center;
+}
+.sgp-credit a { color: #66c0f4; text-decoration: none; }
+.sgp-credit a:hover { text-decoration: underline; }

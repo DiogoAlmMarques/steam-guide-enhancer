@@ -37,6 +37,14 @@ While draw mode is on, clicks become pen strokes. Leave draw mode to click links
 
 Everything stays in your browser (`chrome.storage.local`). The extension makes no network requests and only runs on `steamcommunity.com/sharedfiles/filedetails/*` pages.
 
+## Disclaimer
+
+Not affiliated with or endorsed by Valve Corporation. Steam is a trademark of Valve Corporation.
+
+## Author
+
+Made by **Diogo Marques**: [github.com/DiogoAlmMarques](https://github.com/DiogoAlmMarques)
+
 ## License
 
 MIT
