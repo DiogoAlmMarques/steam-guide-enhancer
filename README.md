@@ -1,6 +1,14 @@
-# Steam Guide Enhancer
+<p align="center">
+  <img src="icons/logo.svg" width="112" alt="Steam Guide Enhancer logo">
+</p>
+
+<h1 align="center">Steam Guide Enhancer</h1>
 
 A small Brave / Chrome extension that makes long Steam Community guides easier to follow. It lets you tick off sections, take notes, draw on the page, and jump back to where you stopped. Everything is saved in your browser, so it's still there after you restart your PC.
+
+<p align="center">
+  <img src="docs/screenshot.png" width="720" alt="Steam Guide Enhancer on a Steam guide: ticked sections, drawings in the margin, the drawing toolbar and the progress panel">
+</p>
 
 ## Features
 
