@@ -39,7 +39,7 @@ To update, replace the files in the folder and click the reload ↻ icon on the 
 | Draw / highlight | **✏️ Draw on page**, then pick a tool from the top toolbar. Press **Esc** or click **Done** to stop |
 | Hide the panel | **–** in the panel header |
 
-While draw mode is on, clicks become pen strokes. Leave draw mode to click links and checkboxes again.
+Checkboxes and 📝 buttons still work while draw mode is on. Other clicks become pen strokes, so leave draw mode to click links.
 
 ## Privacy
 

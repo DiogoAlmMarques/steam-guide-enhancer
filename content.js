@@ -433,9 +433,23 @@
     if (changed) redrawSoon();
   };
 
+  // Checkboxes and 📝 buttons stay usable while drawing: if the click lands on
+  // one of them (underneath the drawing layer), press it instead of drawing.
+  const controlAt = (x, y) => {
+    const els = document.elementsFromPoint ? document.elementsFromPoint(x, y) : [];
+    const under = els.find(el => el !== cv); // topmost page element below the layer
+    return under && under.closest ? under.closest('.sgp-check, .sgp-note-btn') : null;
+  };
+
   cv.addEventListener('pointerdown', e => {
     if (!drawMode || e.button !== 0) return;
     e.preventDefault();
+    const ctl = controlAt(e.clientX, e.clientY);
+    if (ctl) {
+      const input = ctl.querySelector('input');
+      (input || ctl).click(); // a checkbox click toggles it and saves via its change handler
+      return;
+    }
     try { cv.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
     if (tool.kind === 'eraser') {
       erasing = { removed: new Map() };
@@ -457,10 +471,22 @@
     redrawSoon();
   });
 
+  let hoverPending = false;
   cv.addEventListener('pointermove', e => {
     if (!drawMode) return;
     if (erasing) { eraseAt(e.clientX, e.clientY); return; }
-    if (!live) return;
+    if (!live) {
+      // show a hand cursor over checkboxes / note buttons
+      if (!hoverPending) {
+        hoverPending = true;
+        const x = e.clientX, y = e.clientY;
+        requestAnimationFrame(() => {
+          hoverPending = false;
+          cv.style.cursor = controlAt(x, y) ? 'pointer' : '';
+        });
+      }
+      return;
+    }
     const rect = hosts.get(live.id).getBoundingClientRect();
     const x = Math.round(e.clientX - rect.left), y = Math.round(e.clientY - rect.top);
     const p = live.st.p;
